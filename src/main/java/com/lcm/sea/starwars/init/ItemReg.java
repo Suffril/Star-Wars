@@ -2,10 +2,11 @@ package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.client.InitStages;
-import com.lcm.sea.starwars.common.items.ItemBanthaBlaster;
 import com.lcm.sea.starwars.common.items.ItemBase;
-
+import com.lcm.sea.starwars.common.items.ItemConsumeableBase;
 import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
+
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -30,7 +31,7 @@ public class ItemReg {
 
         reg(reg,
                 new ItemBase("test"),
-                new ItemBanthaBlaster(4,true),
+                new ItemConsumeableBase(4,true,"bantha_blaster",EnumAction.DRINK),
                 new ItemLightsaberBase("saber_test")
 
 
