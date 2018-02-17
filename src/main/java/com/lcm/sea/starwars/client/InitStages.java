@@ -14,7 +14,6 @@ public class InitStages {
             Item item = ItemReg.ITEMS.get(i);
             ModelResourceLocation mrl = new ModelResourceLocation(StarWars.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory");
             ModelLoader.setCustomModelResourceLocation(item, 0, mrl);
-            ItemReg.ITEMS.clear();
             StarWars.logger.info("Finished adding model renders");
         }
     }

@@ -1,4 +1,4 @@
-package com.lcm.sea.starwars.common;
+package com.lcm.sea.starwars.common.items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemFood;

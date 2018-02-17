@@ -2,10 +2,10 @@ package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.client.InitStages;
-import com.lcm.sea.starwars.common.ItemBanthaBlaster;
-import com.lcm.sea.starwars.common.ItemBase;
+import com.lcm.sea.starwars.common.items.ItemBanthaBlaster;
+import com.lcm.sea.starwars.common.items.ItemBase;
 
-import net.minecraft.creativetab.CreativeTabs;
+import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,9 +29,12 @@ public class ItemReg {
         IForgeRegistry<Item> reg = event.getRegistry();
 
         reg(reg,
-                //Bullet
                 new ItemBase("test"),
-                new ItemBanthaBlaster(4,true));
+                new ItemBanthaBlaster(4,true),
+                new ItemLightsaberBase("saber_test")
+
+
+        );
 
         if(StarWars.FML.getSide().isClient()){InitStages.items();}
 

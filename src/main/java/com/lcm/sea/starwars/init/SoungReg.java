@@ -14,10 +14,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class SoungReg {
     private static List<SoundEvent> SOUNDS = new ArrayList<>();
 
-    public static final SoundEvent SABER_IGNITE = create("ignite"); //ignore this rn
+    //I've yet to actually find and add sounds, ignore these in the meantime, they WILL be null etc
+
+    public static final SoundEvent SABER_IGNITE = create("saber_ignite");
+    public static final SoundEvent SABER_UNIGNITE = create("saber_unignite");
 
     @SubscribeEvent
-    public static void registerSoundEvents(RegistryEvent.Register<SoundEvent> event) {
+    public static void addSounds(RegistryEvent.Register<SoundEvent> event) {
         event.getRegistry().registerAll(SOUNDS.toArray(new SoundEvent[SOUNDS.size()]));
     }
 
