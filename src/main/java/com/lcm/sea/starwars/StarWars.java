@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = StarWars.MODID, name = StarWars.NAME, version = StarWars.VERSION, dependencies = "required:forge@[14.23.1.2574,); required-after:lucraftcore@[1.12-2.0.4,)", acceptedMinecraftVersions = "1.12, 1.12.1, 1.12.2")
 public class StarWars
 {
-    public static final String MODID = "lcm-star-wars";
+    public static final String MODID = "starwars";
     public static final String NAME = "Star Wars";
     public static final String VERSION = "1.1";
 
