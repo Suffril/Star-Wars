@@ -2,7 +2,10 @@ package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.client.InitStages;
+import com.lcm.sea.starwars.common.ItemBanthaBlaster;
 import com.lcm.sea.starwars.common.ItemBase;
+
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,8 +30,10 @@ public class ItemReg {
 
         reg(reg,
                 //Bullet
-                new ItemBase("test")
-        );
+                new ItemBase("test"),
+                new ItemBanthaBlaster(4,true).setUnlocalizedName("banthablaster").setRegistryName("banthablaster").setCreativeTab(CreativeTabs.BREWING
+                		
+         ));
 
         if(StarWars.FML.getSide().isClient()){InitStages.items();}
 
