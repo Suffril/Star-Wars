@@ -10,8 +10,6 @@ public class ItemBanthaBlaster extends ItemFood {
 		setUnlocalizedName("banthablaster");
 		setRegistryName("banthablaster");
 		setCreativeTab(CreativeTabs.BREWING);
-        		
-		   
 	}
 
 

@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "thedalekmod:items/banthblaster"
+        "layer0": "starwars:items/bantha_blaster"
     },
 	"display": {
 		"thirdperson_righthand": {

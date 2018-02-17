@@ -1,15 +1,13 @@
-[
-{
-  "modid": "lcm-star-wars",
+[{
+  "modid": "starwars",
   "name": "Star Wars",
   "description": "Star wars",
   "version": "1.1",
   "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
-  "authorList":"",
+  "authorList": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
-}
-]
+}]
