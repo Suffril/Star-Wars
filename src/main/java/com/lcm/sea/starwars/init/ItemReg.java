@@ -31,9 +31,7 @@ public class ItemReg {
         reg(reg,
                 //Bullet
                 new ItemBase("test"),
-                new ItemBanthaBlaster(4,true).setUnlocalizedName("banthablaster").setRegistryName("banthablaster").setCreativeTab(CreativeTabs.BREWING
-                		
-         ));
+                new ItemBanthaBlaster(4,true));
 
         if(StarWars.FML.getSide().isClient()){InitStages.items();}
 
