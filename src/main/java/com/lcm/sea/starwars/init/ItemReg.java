@@ -26,7 +26,6 @@ public class ItemReg {
         IForgeRegistry<Item> reg = event.getRegistry();
 
         reg(reg,
-                //Bullet
                 new ItemBase("test")
         );
 
