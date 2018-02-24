@@ -1,7 +1,6 @@
 package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
-import com.lcm.sea.starwars.common.items.ItemBanthaBlaster;
 import com.lcm.sea.starwars.common.items.ItemConsumeableBase;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
