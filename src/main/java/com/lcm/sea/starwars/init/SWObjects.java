@@ -2,9 +2,11 @@ package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.common.items.ItemBanthaBlaster;
+import com.lcm.sea.starwars.common.items.ItemConsumeableBase;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
@@ -32,7 +34,7 @@ import java.util.Arrays;
 public class SWObjects
 {
     public static class Items {
-        public static final Item banthaBlaster = new ItemBanthaBlaster(4,true);
+        public static final Item banthaBlaster = new ItemConsumeableBase(4,true,"bantha_blaster", EnumAction.DRINK);
     }
 
     public static class Blocks
