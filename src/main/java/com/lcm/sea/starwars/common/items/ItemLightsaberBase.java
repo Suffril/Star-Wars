@@ -1,7 +1,8 @@
 package com.lcm.sea.starwars.common.items;
 
 import javax.annotation.Nullable;
-import com.lcm.sea.starwars.init.SoungReg;
+
+import com.lcm.sea.starwars.init.SWObjects;
 import com.lcm.sea.starwars.utils.Utils;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -51,10 +52,10 @@ public class ItemLightsaberBase extends Item {
 
         if(!stack.getTagCompound().getBoolean("ignited"))
         {
-            Utils.playSound(player, SoungReg.SABER_IGNITE);
+            Utils.playSound(player, SWObjects.SoundEvents.SABER_IGNITE);
             stack.getTagCompound().setBoolean("ignited", true);
         }else {
-            Utils.playSound(player, SoungReg.SABER_UNIGNITE);
+            Utils.playSound(player, SWObjects.SoundEvents.SABER_UNIGNITE);
             stack.getTagCompound().setBoolean("ignited", false);
         }
 
