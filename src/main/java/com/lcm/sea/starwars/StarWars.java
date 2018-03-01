@@ -1,5 +1,8 @@
 package com.lcm.sea.starwars;
 
+import com.lcm.sea.starwars.client.render.RenderBB8;
+import com.lcm.sea.starwars.common.mobs.EntityBB8;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -27,6 +30,9 @@ public class StarWars
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-
+        if(FML.getSide().isClient())
+        {
+            RenderingRegistry.registerEntityRenderingHandler(EntityBB8.class, new RenderBB8());
+        }
     }
 }

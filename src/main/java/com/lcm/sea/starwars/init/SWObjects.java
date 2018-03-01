@@ -2,6 +2,7 @@ package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.common.items.ItemConsumeableBase;
+import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -16,6 +17,8 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -50,6 +53,8 @@ public class SWObjects
     public static class EntityEntries
     {
         // public static final EntityEntry example = EntityEntryBuilder.create().id(new ResourceLocation(StarWars.MODID, "NAME"), ID_NUMBER).name("NAME");
+         public static final EntityEntry bb8 = EntityEntryBuilder.create().entity(EntityBB8.class).id(new ResourceLocation(StarWars.MODID, "bb8"), 0).name("bb8").tracker(80, 3, false).build();
+
     }
     
 
