@@ -1,0 +1,10 @@
+{
+	"bb8_hurt": {
+		"category": "hostile",
+		"subtitle": "sw.bb8_hurt.subtitle",
+		"sounds": [{
+			"name": "starwars:bb8/bb8_hurt",
+			"stream": false
+		}]
+	}
+}

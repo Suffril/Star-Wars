@@ -9,6 +9,9 @@ import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;
 
+    /**
+    * BB8 rendering class, although most stuff to do with BB8 is done in his model class
+    */
 public class RenderBB8 extends RenderLiving<EntityBB8>{
 
     public RenderBB8() {

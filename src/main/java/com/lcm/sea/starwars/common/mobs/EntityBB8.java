@@ -1,10 +1,14 @@
 package com.lcm.sea.starwars.common.mobs;
 
+import com.lcm.sea.starwars.init.SWObjects;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -19,7 +23,7 @@ public class EntityBB8 extends EntityTameable {
     @Nullable
     @Override
     public EntityAgeable createChild(EntityAgeable ageable) {
-        return null;
+        return new EntityBB8(world);
     }
 
 
@@ -50,4 +54,22 @@ public class EntityBB8 extends EntityTameable {
 
         getAttributeMap().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(2.0D);
     }
+
+    @Override
+    protected SoundEvent getAmbientSound()
+    {
+        return null;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn)
+    {
+        return SWObjects.SoundEvents.BB8_HURT;
+    }
+    @Override
+    protected SoundEvent getDeathSound()
+    {
+        return SWObjects.SoundEvents.BB8_HURT;
+    }
+
 }

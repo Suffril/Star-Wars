@@ -1,9 +1,8 @@
 package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
-import com.lcm.sea.starwars.common.items.ItemConsumeableBase;
+import com.lcm.sea.starwars.common.items.ItemEatableBase;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
-import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.EnumAction;
@@ -36,7 +35,7 @@ import java.util.Arrays;
 public class SWObjects
 {
     public static class Items {
-        public static final Item banthaBlaster = new ItemConsumeableBase(4,true,"bantha_blaster", EnumAction.DRINK);
+        public static final Item banthaBlaster = new ItemEatableBase(4,true,"bantha_blaster", EnumAction.DRINK);
     }
 
     public static class Blocks
@@ -48,6 +47,11 @@ public class SWObjects
     {
         public static final SoundEvent SABER_IGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_engage")).setRegistryName(StarWars.MODID, "saber_engage");
         public static final SoundEvent SABER_UNIGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_disengage")).setRegistryName(StarWars.MODID, "saber_disengagey");
+
+        //bb8
+        public static final SoundEvent BB8_HURT = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_hurt")).setRegistryName(StarWars.MODID, "bb8_hurt");
+
+
     }
 
     public static class EntityEntries

@@ -9,12 +9,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class ItemConsumeableBase extends ItemFood {
+public class ItemEatableBase extends ItemFood {
 	
 	EnumAction action; 
 	String regName;
 
-	public ItemConsumeableBase(int amount, boolean isWolfFood, String regName, EnumAction action) {
+	public ItemEatableBase(int amount, boolean isWolfFood, String regName, EnumAction action) {
 		super(amount, isWolfFood);
 		setUnlocalizedName(regName);
 		setRegistryName(regName);

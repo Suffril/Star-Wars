@@ -5,6 +5,10 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item {
 
+    /**
+     * This item is basically just an outline for the rest
+     */
+
     public ItemBase(String name, CreativeTabs tab)
     {
         setUnlocalizedName(name);
