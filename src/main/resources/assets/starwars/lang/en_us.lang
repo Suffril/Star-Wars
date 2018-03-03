@@ -1,0 +1,12 @@
+//Items
+item.bantha_blaster.name=Bantha Blaster
+
+//Subtitles
+starwars.subtitle.saber_engage=Lightsaber Engaged
+starwars.subtitle.saber_disengage=Lightsaber Disengaged 
+starwars.subtitle.bb8_beep_0=BB8 Beeps
+starwars.subtitle.bb8_beep_1=BB8 Beeps
+starwars.subtitle.bb8_beep_2=BB8 Beeps
+starwars.subtitle.bb8_beep_3=BB8 Beeps 
+starwars.subtitle.bb8_hit=BB8 Damaged
+starwars.subtitle.bb8_dead=BB8 Dies

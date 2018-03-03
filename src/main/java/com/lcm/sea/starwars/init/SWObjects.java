@@ -2,6 +2,7 @@ package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.common.items.ItemConsumeableBase;
+import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
@@ -46,8 +47,16 @@ public class SWObjects
 
     public static class SoundEvents
     {
+    	//Lightsaber Sounds
         public static final SoundEvent SABER_IGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_engage")).setRegistryName(StarWars.MODID, "saber_engage");
-        public static final SoundEvent SABER_UNIGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_disengage")).setRegistryName(StarWars.MODID, "saber_disengagey");
+        public static final SoundEvent SABER_UNIGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_disengage")).setRegistryName(StarWars.MODID, "saber_disengage");
+        //BB8 Sounds
+        public static final SoundEvent BB8_0 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_0")).setRegistryName(StarWars.MODID, "bb8_beep_0");
+        public static final SoundEvent BB8_1 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_1")).setRegistryName(StarWars.MODID, "bb8_beep_1");
+        public static final SoundEvent BB8_2 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_2")).setRegistryName(StarWars.MODID, "bb8_beep_2");
+        public static final SoundEvent BB8_3 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_3")).setRegistryName(StarWars.MODID, "bb8_beep_3");
+        public static final SoundEvent BB8_4 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_dead")).setRegistryName(StarWars.MODID, "bb8_dead");
+        public static final SoundEvent BB8_5 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_hit")).setRegistryName(StarWars.MODID, "bb8_hit");
     }
 
     public static class EntityEntries

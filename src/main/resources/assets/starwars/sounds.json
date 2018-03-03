@@ -1,0 +1,66 @@
+{
+	"saber_engage": {
+		"subtitle": "starwars.subtitle.saber_engage",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:saber_engage",
+			"stream": false
+		}]
+	},
+	"saber_disengage": {
+		"subtitle": "starwars.subtitle.saber_disengage",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:saber_disengage",
+			"stream": false
+		}]
+	},
+	"bb8_beep_0": {
+		"subtitle": "starwars.subtitle.bb8_beep_0",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:bb8_beep_0",
+			"stream": false
+		}]
+	},
+	"bb8_beep_1": {
+		"subtitle": "starwars.subtitle.bb8_beep_1",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:bb8_beep_1",
+			"stream": false
+		}]
+	},
+	"bb8_beep_2": {
+		"subtitle": "starwars.subtitle.bb8_beep_2",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:bb8_beep_2",
+			"stream": false
+		}]
+	},
+	"bb8_beep_3": {
+		"subtitle": "starwars.subtitle.bb8_beep_3",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:bb8_beep_3",
+			"stream": false
+		}]
+	},
+	"bb8_dead": {
+		"subtitle": "starwars.subtitle.bb8_dead",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:bb8_dead",
+			"stream": false
+		}]
+	},
+	"bb8_hit": {
+		"subtitle": "starwars.subtitle.bb8_hit",
+		"category": "master",
+		"sounds": [{
+			"name": "starwars:bb8_hit",
+			"stream": false
+		}]
+	}
+}
