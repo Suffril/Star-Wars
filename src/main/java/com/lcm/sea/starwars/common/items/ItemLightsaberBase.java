@@ -24,8 +24,7 @@ public class ItemLightsaberBase extends Item {
         this.setRegistryName(name);
 
         //For model animation
-        addPropertyOverride(new ResourceLocation("ignited"), new IItemPropertyGetter()
-        {
+        addPropertyOverride(new ResourceLocation("ignited"), new IItemPropertyGetter() {
             @Override
             @SideOnly(Side.CLIENT)
             public float apply(ItemStack stack, @Nullable World world, @Nullable EntityLivingBase entityIn)
@@ -37,12 +36,10 @@ public class ItemLightsaberBase extends Item {
                     return stack.getTagCompound().getBoolean("ignited") ? 0.0F : 1.0F;
             }
         });
-
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand)
-    {
+    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 
         ItemStack stack = player.getHeldItemMainhand();
 
@@ -63,8 +60,7 @@ public class ItemLightsaberBase extends Item {
     }
 
     @Override
-    public boolean onEntitySwing(EntityLivingBase player, ItemStack stack)
-    {
+    public boolean onEntitySwing(EntityLivingBase player, ItemStack stack) {
         if (stack.getTagCompound() == null) {
             stack.setTagCompound(new NBTTagCompound());
             stack.getTagCompound().setBoolean("ignited", false);
@@ -72,7 +68,7 @@ public class ItemLightsaberBase extends Item {
 
         if(stack.getTagCompound().getBoolean("ignited")) {
             //TO-DO Swinging sound
-         }
+        }
 
         return super.onEntitySwing(player, stack);
     }

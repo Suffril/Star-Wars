@@ -9,15 +9,13 @@ public class ItemBase extends Item {
      * This item is basically just an outline for the rest
      */
 
-    public ItemBase(String name, CreativeTabs tab)
-    {
+    public ItemBase(String name, CreativeTabs tab) {
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(tab);
     }
 
-    public ItemBase(String name)
-    {
+    public ItemBase(String name) {
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(CreativeTabs.COMBAT);

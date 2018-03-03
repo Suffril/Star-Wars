@@ -32,19 +32,18 @@ import java.util.Arrays;
  */
 @Mod.EventBusSubscriber
 @SuppressWarnings({"unused"})
-public class SWObjects
-{
+public class SWObjects {
     public static class Items {
         public static final Item banthaBlaster = new ItemEatableBase(4,true,"bantha_blaster", EnumAction.DRINK);
     }
 
-    public static class Blocks
-    {
+    public static class Blocks {
 
     }
 
-    public static class SoundEvents
-    {
+    public static class SoundEvents {
+    	
+    	//Saber
         public static final SoundEvent SABER_IGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_engage")).setRegistryName(StarWars.MODID, "saber_engage");
         public static final SoundEvent SABER_UNIGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_disengage")).setRegistryName(StarWars.MODID, "saber_disengage");
 
@@ -56,51 +55,35 @@ public class SWObjects
         public static final SoundEvent BB8_4 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_4")).setRegistryName(StarWars.MODID, "bb8_beep_4");
         public static final SoundEvent BB8_HURT = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_hurt")).setRegistryName(StarWars.MODID, "bb8_hurt");
         public static final SoundEvent BB8_DEAD = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_dead")).setRegistryName(StarWars.MODID, "bb8_dead");
-
-
-
-
-
     }
 
-    public static class EntityEntries
-    {
-        // public static final EntityEntry example = EntityEntryBuilder.create().id(new ResourceLocation(StarWars.MODID, "NAME"), ID_NUMBER).name("NAME");
+    public static class EntityEntries {
+       //public static final EntityEntry example = EntityEntryBuilder.create().id(new ResourceLocation(StarWars.MODID, "NAME"), ID_NUMBER).name("NAME");
          public static final EntityEntry bb8 = EntityEntryBuilder.create().entity(EntityBB8.class).id(new ResourceLocation(StarWars.MODID, "bb8"), 0).name("bb8").tracker(80, 3, false).build();
-
     }
     
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @SubscribeEvent
-    public static void registerObjects(RegistryEvent event) throws Exception
-    {
-        if (event instanceof RegistryEvent.Register)
-        {
+    public static void registerObjects(RegistryEvent event) throws Exception {
+        if (event instanceof RegistryEvent.Register) {
             IForgeRegistry registry = ((RegistryEvent.Register) event).getRegistry();
 
-            for (Class<?> aClass : SWObjects.class.getDeclaredClasses())
-            {
-                if (Arrays.stream(aClass.getDeclaredFields()).anyMatch(field -> registry.getRegistrySuperType().isAssignableFrom(field.getType())))
-                {
+            for (Class<?> aClass : SWObjects.class.getDeclaredClasses()) {
+                if (Arrays.stream(aClass.getDeclaredFields()).anyMatch(field -> registry.getRegistrySuperType().isAssignableFrom(field.getType()))) {
                     ArrayList<IForgeRegistryEntry> entries = new ArrayList<>();
 
-                    for (Field field : aClass.getDeclaredFields())
-                    {
-                        try
-                        {
+                    for (Field field : aClass.getDeclaredFields()) {
+                        try {
                             entries.add((IForgeRegistryEntry) field.get(null));
                         }
-                        catch (IllegalAccessException e)
-                        {
+                        catch (IllegalAccessException e) {
                             e.printStackTrace();
                         }
                     }
 
-                    if (Arrays.stream(aClass.getDeclaredFields()).anyMatch(field -> Item.class.isAssignableFrom(field.getType())))
-                    {
-                        for (Field f : Blocks.class.getDeclaredFields())
-                        {
+                    if (Arrays.stream(aClass.getDeclaredFields()).anyMatch(field -> Item.class.isAssignableFrom(field.getType()))) {
+                        for (Field f : Blocks.class.getDeclaredFields()) {
                             Block block = (Block) f.get(null);
                             entries.add(new ItemBlock(block).setRegistryName(block.getRegistryName()).setUnlocalizedName(block.getUnlocalizedName()));
                         }
@@ -112,17 +95,14 @@ public class SWObjects
     }
 
     @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent e) throws ReflectiveOperationException
-    {
-        for (Field f : Items.class.getDeclaredFields())
-        {
+    public static void registerModels(ModelRegistryEvent e) throws ReflectiveOperationException {
+        for (Field f : Items.class.getDeclaredFields()) {
             Item item = (Item) f.get(null);
             ModelResourceLocation loc = new ModelResourceLocation(item.getRegistryName(), "inventory");
             ModelLoader.setCustomModelResourceLocation(item, 0, loc);
         }
 
-        for (Field f : Blocks.class.getDeclaredFields())
-        {
+        for (Field f : Blocks.class.getDeclaredFields()) {
             Block block = (Block) f.get(null);
             Item item = Item.getItemFromBlock(block);
             ModelResourceLocation loc = new ModelResourceLocation(item.getRegistryName(), "inventory");
@@ -132,10 +112,8 @@ public class SWObjects
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
-    public static void onModelBake(ModelBakeEvent e)
-    {
-        for (ModelResourceLocation loc : e.getModelRegistry().getKeys())
-        {
+    public static void onModelBake(ModelBakeEvent e) {
+        for (ModelResourceLocation loc : e.getModelRegistry().getKeys()) {
 
         }
     }
