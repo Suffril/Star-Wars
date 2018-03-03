@@ -46,16 +46,17 @@ public class SWObjects
     public static class SoundEvents
     {
         public static final SoundEvent SABER_IGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_engage")).setRegistryName(StarWars.MODID, "saber_engage");
-        public static final SoundEvent SABER_UNIGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_disengage")).setRegistryName(StarWars.MODID, "saber_disengagey");
+        public static final SoundEvent SABER_UNIGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_disengage")).setRegistryName(StarWars.MODID, "saber_disengage");
 
         //bb8
-        public static final SoundEvent BB8_HURT = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_hurt")).setRegistryName(StarWars.MODID, "bb8_hurt");
         public static final SoundEvent BB8_0 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_0")).setRegistryName(StarWars.MODID, "bb8_beep_0");
         public static final SoundEvent BB8_1 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_1")).setRegistryName(StarWars.MODID, "bb8_beep_1");
         public static final SoundEvent BB8_2 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_2")).setRegistryName(StarWars.MODID, "bb8_beep_2");
         public static final SoundEvent BB8_3 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_3")).setRegistryName(StarWars.MODID, "bb8_beep_3");
-        public static final SoundEvent BB8_4 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_dead")).setRegistryName(StarWars.MODID, "bb8_dead");
-        public static final SoundEvent BB8_5 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_hit")).setRegistryName(StarWars.MODID, "bb8_hit");
+        public static final SoundEvent BB8_4 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_4")).setRegistryName(StarWars.MODID, "bb8_beep_4");
+        public static final SoundEvent BB8_HURT = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_hurt")).setRegistryName(StarWars.MODID, "bb8_hurt");
+        public static final SoundEvent BB8_DEAD = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_dead")).setRegistryName(StarWars.MODID, "bb8_dead");
+
 
 
 

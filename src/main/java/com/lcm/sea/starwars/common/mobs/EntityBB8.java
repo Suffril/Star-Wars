@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 public class EntityBB8 extends EntityTameable {
 
-    private SoundEvent[] bb8Sounds = new SoundEvent[]{SWObjects.SoundEvents.BB8_0, SWObjects.SoundEvents.BB8_1, SWObjects.SoundEvents.BB8_2, SWObjects.SoundEvents.BB8_3, SWObjects.SoundEvents.BB8_4, SWObjects.SoundEvents.BB8_5};
+    private SoundEvent[] bb8Sounds = new SoundEvent[]{SWObjects.SoundEvents.BB8_0, SWObjects.SoundEvents.BB8_1, SWObjects.SoundEvents.BB8_2, SWObjects.SoundEvents.BB8_3, SWObjects.SoundEvents.BB8_4};
 
 
     public EntityBB8(World world) {
@@ -72,7 +72,7 @@ public class EntityBB8 extends EntityTameable {
     @Override
     protected SoundEvent getDeathSound()
     {
-        return SWObjects.SoundEvents.BB8_HURT;
+        return SWObjects.SoundEvents.BB8_DEAD;
     }
 
 }
