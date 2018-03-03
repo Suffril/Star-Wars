@@ -15,6 +15,9 @@ import javax.annotation.Nullable;
 
 public class EntityBB8 extends EntityTameable {
 
+    private SoundEvent[] bb8Sounds = new SoundEvent[]{SWObjects.SoundEvents.BB8_0, SWObjects.SoundEvents.BB8_1, SWObjects.SoundEvents.BB8_2, SWObjects.SoundEvents.BB8_3, SWObjects.SoundEvents.BB8_4, SWObjects.SoundEvents.BB8_5};
+
+
     public EntityBB8(World world) {
         super(world);
         setSize(0.6F, 0.85F);
@@ -58,7 +61,7 @@ public class EntityBB8 extends EntityTameable {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return null;
+        return bb8Sounds[rand.nextInt(bb8Sounds.length)];
     }
 
     @Override
