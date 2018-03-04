@@ -1,8 +1,12 @@
 package com.lcm.sea.starwars.init;
 
 import com.lcm.sea.starwars.StarWars;
+import com.lcm.sea.starwars.common.abilities.AbilityForceJump;
+import com.lcm.sea.starwars.common.items.ItemBase;
 import com.lcm.sea.starwars.common.items.ItemEatableBase;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
+import com.lcm.sea.starwars.common.superpower.SuperPowerForce;
+import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.EnumAction;
@@ -36,12 +40,27 @@ public class SWObjects
 {
     public static class Items {
         public static final Item banthaBlaster = new ItemEatableBase(4,true,"bantha_blaster", EnumAction.DRINK);
+        public static final Item temp = new ItemBase("temp");
     }
 
     public static class Blocks
     {
 
     }
+
+    public static class AbilityEntries { // NO_UCD (unused code)
+        public static final Ability.AbilityEntry bouncy = newAbilityEntry(AbilityForceJump.class, "forcejump");
+
+        private static Ability.AbilityEntry newAbilityEntry(Class<? extends Ability> ability, String name) {
+            return new Ability.AbilityEntry(ability, new ResourceLocation(StarWars.MODID, name));
+        }
+    }
+
+
+    public static class Superpowers {
+        public static final SuperPowerForce force_sensitive = SuperPowerForce.INSTANCE;
+    }
+
 
     public static class SoundEvents
     {
