@@ -87,8 +87,7 @@ public class ModelBB8 extends ModelBase {
     }
 
     @Override
-    public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale)
-    {
+    public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
         GlStateManager.pushMatrix();
         GlStateManager.translate(0, 1.0F, 0);
         Head.render(scale);
@@ -100,8 +99,7 @@ public class ModelBB8 extends ModelBase {
 
 
     @Override
-    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float HeadPitch, float scaleFactor, Entity entity)
-    {
+    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float HeadPitch, float scaleFactor, Entity entity) {
         if(entity.prevPosX != entity.posX) {
             Base.rotateAngleX = entity.getEntityWorld().getWorldTime();
         } else {

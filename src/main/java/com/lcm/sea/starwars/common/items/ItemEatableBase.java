@@ -28,18 +28,14 @@ public class ItemEatableBase extends ItemFood {
 		return action;
 	}
 	
-	
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		if(regName.equals("bantha_blaster")) {
-		if(!worldIn.isRemote)
-		{
-			player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA,500));
+			if(!worldIn.isRemote) {
+				player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA,500));
+			}
 		}
-		}
-		
 		super.onFoodEaten(stack, worldIn, player);
 	}
-
-
+	
 }
