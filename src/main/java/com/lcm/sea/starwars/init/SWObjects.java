@@ -5,7 +5,7 @@ import com.lcm.sea.starwars.common.abilities.AbilityForceJump;
 import com.lcm.sea.starwars.common.items.ItemBase;
 import com.lcm.sea.starwars.common.items.ItemEatableBase;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
-import com.lcm.sea.starwars.common.superpower.SuperPowerForce;
+import com.lcm.sea.starwars.common.superpower.force_sensitive.SuperPowerForce;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -56,7 +56,7 @@ public class SWObjects {
 
 
     public static class Superpowers {
-        public static final SuperPowerForce force_sensitive = SuperPowerForce.INSTANCE;
+        public static final SuperPowerForce force_sensitive = SuperPowerForce.force_sensitive;
     }
 
 

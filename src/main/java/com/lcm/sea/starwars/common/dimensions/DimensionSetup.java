@@ -17,7 +17,7 @@ public class DimensionSetup {
 
     public static void regTypes()
     {
-        tatooine = DimensionType.register(StarWars.MODID, "_tatooine", 5, WorldProviderTatooine.class, false);
+        tatooine = DimensionType.register("tatooine", "_tatooine", 5, WorldProviderTatooine.class, false);
     }
 
     private static void registerDimensions() {

@@ -1,6 +1,6 @@
 package com.lcm.sea.starwars;
 import com.lcm.sea.starwars.client.render.RenderBB8;
-import com.lcm.sea.starwars.common.CommandDimTravel;
+import com.lcm.sea.starwars.common.commands.CommandDimTravel;
 import com.lcm.sea.starwars.common.dimensions.DimensionSetup;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;

@@ -1,4 +1,4 @@
-package com.lcm.sea.starwars.common;
+package com.lcm.sea.starwars.common.commands;
 
 import com.lcm.sea.starwars.utils.SWTeleporter;
 import net.minecraft.command.CommandBase;
