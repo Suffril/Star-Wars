@@ -1,0 +1,92 @@
+{
+  "saber_engage": {
+    "subtitle": "lcm-star-wars.subtitle.saber_engage",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:saber_engage",
+        "stream": false
+      }
+    ]
+  },
+  "saber_disengage": {
+    "subtitle": "lcm-star-wars.subtitle.saber_disengage",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:saber_disengage",
+        "stream": false
+      }
+    ]
+  },
+  "bb8_beep_0": {
+    "subtitle": "lcm-star-wars.subtitle.bb8_beep_0",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:bb8/bb8_beep_0",
+        "stream": false
+      }
+    ]
+  },
+  "bb8_beep_1": {
+    "subtitle": "lcm-star-wars.subtitle.bb8_beep_1",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:bb8/bb8_beep_1",
+        "stream": false
+      }
+    ]
+  },
+  "bb8_beep_2": {
+    "subtitle": "lcm-star-wars.subtitle.bb8_beep_2",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:bb8/bb8_beep_2",
+        "stream": false
+      }
+    ]
+  },
+  "bb8_beep_3": {
+    "subtitle": "lcm-star-wars.subtitle.bb8_beep_3",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:bb8/bb8_beep_3",
+        "stream": false
+      }
+    ]
+  },
+  "bb8_beep_4": {
+    "subtitle": "lcm-star-wars.subtitle.bb8_beep_4",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:bb8/bb8_beep_4",
+        "stream": false
+      }
+    ]
+  },
+  "bb8_hurt": {
+    "subtitle": "lcm-star-wars.subtitle.bb8_hurt",
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:bb8/bb8_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "bb8_dead": {
+    "subtitle": "lcm-star-wars.subtitle.bb8_dead",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:bb8/bb8_dead",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -10,8 +10,8 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 public class ItemEatableBase extends ItemFood {
-	
-	EnumAction action; 
+
+	EnumAction action;
 	String regName;
 
 	public ItemEatableBase(int amount, boolean isWolfFood, String regName, EnumAction action) {
@@ -22,20 +22,18 @@ public class ItemEatableBase extends ItemFood {
 		this.action = action;
 		this.regName = regName;
 	}
-	
-	@Override
-	public EnumAction getItemUseAction(ItemStack stack) {
-		return action;
-	}
-	
-	@Override
-	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-		if(regName.equals("bantha_blaster")) {
-			if(!worldIn.isRemote) {
-				player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA,500));
+
+	@Override protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
+		if (regName.equals("bantha_blaster")) {
+			if (!worldIn.isRemote) {
+				player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 500));
 			}
 		}
 		super.onFoodEaten(stack, worldIn, player);
 	}
-	
+
+	@Override public EnumAction getItemUseAction(ItemStack stack) {
+		return action;
+	}
+
 }

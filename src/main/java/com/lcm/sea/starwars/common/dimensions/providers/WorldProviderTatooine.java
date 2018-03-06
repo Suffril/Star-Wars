@@ -6,8 +6,7 @@ import net.minecraft.world.WorldProvider;
 
 public class WorldProviderTatooine extends WorldProvider {
 
-    @Override
-    public DimensionType getDimensionType() {
-        return DimensionSetup.tatooine;
-    }
+	@Override public DimensionType getDimensionType() {
+		return DimensionSetup.tatooine;
+	}
 }
