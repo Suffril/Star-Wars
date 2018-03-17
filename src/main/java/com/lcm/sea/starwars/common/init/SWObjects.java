@@ -4,6 +4,7 @@ import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.common.items.ItemBase;
 import com.lcm.sea.starwars.common.items.ItemEatableBase;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
+import com.lcm.sea.starwars.common.mobs.vehicles.EntitySpeeder;
 import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerForceSensitive;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
@@ -121,6 +122,7 @@ import java.util.Arrays;
 
 	public static class EntityEntries {
 		public static final EntityEntry bb8 = EntityEntryBuilder.create().entity(EntityBB8.class).id(new ResourceLocation(StarWars.MODID, "bb8"), 0).name("bb8").tracker(80, 3, false).build();
+		public static final EntityEntry speeder = EntityEntryBuilder.create().entity(EntitySpeeder.class).id(new ResourceLocation(StarWars.MODID, "speeder"), 1).name("speeder").tracker(80, 3, false).build();
 	}
 }
 
