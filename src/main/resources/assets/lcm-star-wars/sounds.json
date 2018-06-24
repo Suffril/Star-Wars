@@ -19,6 +19,16 @@
       }
     ]
   },
+  "saber_swing": {
+    "subtitle": "lcm-star-wars.subtitle.saber_swing",
+    "category": "master",
+    "sounds": [
+      {
+        "name": "lcm-star-wars:saber_swing",
+        "stream": false
+      }
+    ]
+  },
   "bb8_beep_0": {
     "subtitle": "lcm-star-wars.subtitle.bb8_beep_0",
     "category": "master",

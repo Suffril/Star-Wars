@@ -3,6 +3,7 @@ package com.lcm.sea.starwars.common.init;
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.common.items.ItemBase;
 import com.lcm.sea.starwars.common.items.ItemEatableBase;
+import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import com.lcm.sea.starwars.common.mobs.vehicles.EntitySpeeder;
 import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerForceSensitive;
@@ -87,6 +88,7 @@ import java.util.Arrays;
 	public static class Items {
 		public static final Item banthaBlaster = new ItemEatableBase(4, true, "bantha_blaster", EnumAction.DRINK);
 		public static final Item temp = new ItemBase("temp");
+		public static final Item testSaber = new ItemLightsaberBase("saber");
 	}
 
 	public static class Blocks {
@@ -109,6 +111,7 @@ import java.util.Arrays;
 		//Saber
 		public static final SoundEvent SABER_IGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_engage")).setRegistryName(StarWars.MODID, "saber_engage");
 		public static final SoundEvent SABER_UNIGNITE = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_disengage")).setRegistryName(StarWars.MODID, "saber_disengage");
+		public static final SoundEvent SABER_SWING = new SoundEvent(new ResourceLocation(StarWars.MODID, "saber_swing")).setRegistryName(StarWars.MODID, "saber_swing");
 
 		//bb8
 		public static final SoundEvent BB8_0 = new SoundEvent(new ResourceLocation(StarWars.MODID, "bb8_beep_0")).setRegistryName(StarWars.MODID, "bb8_beep_0");

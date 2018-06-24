@@ -64,6 +64,7 @@ public class ItemLightsaberBase extends Item {
 
 		if (stack.getTagCompound().getBoolean("ignited")) {
 			//TO-DO Swinging sound
+			Utils.playSound(player, SWObjects.SoundEvents.SABER_SWING);
 		}
 
 		return super.onEntitySwing(player, stack);

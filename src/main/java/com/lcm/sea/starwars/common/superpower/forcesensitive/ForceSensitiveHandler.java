@@ -2,9 +2,7 @@ package com.lcm.sea.starwars.common.superpower.forcesensitive;
 
 import lucraft.mods.lucraftcore.superpowers.Superpower;
 import lucraft.mods.lucraftcore.superpowers.SuperpowerPlayerHandler;
-import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import lucraft.mods.lucraftcore.superpowers.capabilities.ISuperpowerCapability;
-import lucraft.mods.lucraftcore.superpowers.keys.AbilityKeys;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 
 public class ForceSensitiveHandler extends SuperpowerPlayerHandler {
@@ -15,10 +13,6 @@ public class ForceSensitiveHandler extends SuperpowerPlayerHandler {
 
 	@Override public void onUpdate(Phase phase) {
 		super.onUpdate(phase);
-	}
-
-	@Override public Ability getAbilityForKey(AbilityKeys key) {
-		return super.getAbilityForKey(key);
 	}
 
 }
