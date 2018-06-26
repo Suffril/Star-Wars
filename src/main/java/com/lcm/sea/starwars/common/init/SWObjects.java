@@ -3,10 +3,12 @@ package com.lcm.sea.starwars.common.init;
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.common.items.ItemBase;
 import com.lcm.sea.starwars.common.items.ItemEatableBase;
+import com.lcm.sea.starwars.common.items.ItemKyberCrystal;
 import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import com.lcm.sea.starwars.common.mobs.vehicles.EntitySpeeder;
 import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerForceSensitive;
+import com.lcm.sea.starwars.common.utils.EnumSaberParts;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -88,7 +90,9 @@ import java.util.Arrays;
 	public static class Items {
 		public static final Item banthaBlaster = new ItemEatableBase(4, true, "bantha_blaster", EnumAction.DRINK);
 		public static final Item temp = new ItemBase("temp");
-		public static final Item testSaber = new ItemLightsaberBase("saber");
+		public static final Item testSaber = new ItemLightsaberBase("saber", 1F, EnumSaberParts.POMMEL, EnumSaberParts.HANDLE, EnumSaberParts.EMITTER);
+		public static final Item kyber = new ItemKyberCrystal("kyber_crystal", 0x222222);
+		public static final Item kyber1 = new ItemKyberCrystal("kyber_crystal1", 0x003cff);
 	}
 
 	public static class Blocks {

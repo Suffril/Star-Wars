@@ -1,9 +1,11 @@
 //Items
 item.bantha_blaster.name=Bantha Blaster
+item.saber.name=Lightsaber
 
 //Subtitles
 starwars.subtitle.saber_engage=Lightsaber Engaged
-starwars.subtitle.saber_disengage=Lightsaber Disengaged 
+starwars.subtitle.saber_disengage=Lightsaber Disengaged
+starwars.subtitle.saber_swing=Lightsaber Swing
 starwars.subtitle.bb8_beep_0=BB8 Beeps
 starwars.subtitle.bb8_beep_1=BB8 Beeps
 starwars.subtitle.bb8_beep_2=BB8 Beeps

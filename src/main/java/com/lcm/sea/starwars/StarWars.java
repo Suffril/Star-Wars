@@ -39,6 +39,7 @@ import org.apache.logging.log4j.Logger;
 	}
 
 	@EventHandler public void init(FMLInitializationEvent event) {
+		proxy.init();
 		DimensionSetup.init();
 	}
 }

@@ -13,7 +13,7 @@ public class RenderingEvents {
 
     @SubscribeEvent
     public static void onRenderPlayerPost(RenderPlayerEvent.Post e) {
-        System.out.println(e.getEntity());
+        //System.out.println(e.getEntity());
         if(e.getEntity() instanceof EntityPlayer && e.getEntity().getRidingEntity() instanceof EntitySpeeder)
         {
          //   LimbManipulationUtil.getLimbManipulator(e.getRenderer(), LimbManipulationUtil.Limb.LEFT_ARM).setAngles(-75, 0, 75);
