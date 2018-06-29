@@ -2,6 +2,7 @@ package com.lcm.sea.starwars.client.render;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.client.models.item.SaberParts.ModelLightsaberPart;
+import com.lcm.sea.starwars.common.items.ItemSaberPart;
 import com.lcm.sea.starwars.common.utils.EnumSaberParts;
 import com.lcm.sea.starwars.common.utils.NBTKeys;
 import lucraft.mods.lucraftcore.util.helper.LCRenderHelper;
@@ -22,7 +23,7 @@ public class RenderLightsaber extends TileEntityItemStackRenderer {
     private static Vec3d color = new Vec3d(1,0,1);
     private static Vec3d end = start;
 
-    public RenderLightsaber(EnumSaberParts pommel, EnumSaberParts handle, EnumSaberParts emitter) {
+    public RenderLightsaber(ItemSaberPart pommel, ItemSaberPart handle, ItemSaberPart emitter) {
         this.pommel = pommel.getModel();
         this.handle = handle.getModel();
         this.emitter = emitter.getModel();

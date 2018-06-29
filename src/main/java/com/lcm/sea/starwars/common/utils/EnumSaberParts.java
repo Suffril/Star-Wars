@@ -8,15 +8,8 @@ import net.minecraft.client.model.ModelBase;
 
 public enum EnumSaberParts {
 
-    EMITTER(new Emitter()), HANDLE(new Handle()), POMMEL(new Pommel());
-
-    private ModelLightsaberPart model;
-
-    EnumSaberParts(ModelLightsaberPart model) {
-        this.model = model;
-    }
-
-    public ModelLightsaberPart getModel() {
-        return this.model;
-    }
+    EMITTER,
+    CROSSBLADE,
+    HANDLE,
+    POMMEL;
 }

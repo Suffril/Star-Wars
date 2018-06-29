@@ -1,10 +1,10 @@
 package com.lcm.sea.starwars.common.init;
 
 import com.lcm.sea.starwars.StarWars;
-import com.lcm.sea.starwars.common.items.ItemBase;
-import com.lcm.sea.starwars.common.items.ItemEatableBase;
-import com.lcm.sea.starwars.common.items.ItemKyberCrystal;
-import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
+import com.lcm.sea.starwars.client.models.item.SaberParts.Emitter;
+import com.lcm.sea.starwars.client.models.item.SaberParts.Handle;
+import com.lcm.sea.starwars.client.models.item.SaberParts.Pommel;
+import com.lcm.sea.starwars.common.items.*;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import com.lcm.sea.starwars.common.mobs.vehicles.EntitySpeeder;
 import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerForceSensitive;
@@ -90,7 +90,13 @@ import java.util.Arrays;
 	public static class Items {
 		public static final Item banthaBlaster = new ItemEatableBase(4, true, "bantha_blaster", EnumAction.DRINK);
 		public static final Item temp = new ItemBase("temp");
-		public static final Item testSaber = new ItemLightsaberBase("saber", 1F, EnumSaberParts.POMMEL, EnumSaberParts.HANDLE, EnumSaberParts.EMITTER);
+
+		//Test Parts
+		public static final ItemSaberPart pommel = new ItemSaberPart("pommel", new Pommel(), EnumSaberParts.POMMEL);
+		public static final ItemSaberPart handle = new ItemSaberPart("handle", new Handle(), EnumSaberParts.HANDLE);
+		public static final ItemSaberPart emitter = new ItemSaberPart("emitter", new Emitter(), EnumSaberParts.EMITTER);
+		
+		public static final Item testSaber = new ItemLightsaberBase("saber", 1F, pommel, handle, emitter);
 		public static final Item kyber = new ItemKyberCrystal("kyber_crystal", 0x222222);
 		public static final Item kyber1 = new ItemKyberCrystal("kyber_crystal1", 0x003cff);
 	}

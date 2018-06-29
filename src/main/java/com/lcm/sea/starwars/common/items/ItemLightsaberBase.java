@@ -28,7 +28,7 @@ public class ItemLightsaberBase extends Item {
 
 	public static float bladeLength;
 
-	public ItemLightsaberBase(String name, float bladeLength, EnumSaberParts pommel, EnumSaberParts handle, EnumSaberParts emitter) {
+	public ItemLightsaberBase(String name, float bladeLength, ItemSaberPart pommel, ItemSaberPart handle, ItemSaberPart emitter) {
 		setMaxStackSize(1);
 
 		this.setUnlocalizedName(name);
