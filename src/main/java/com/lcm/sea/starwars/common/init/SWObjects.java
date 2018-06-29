@@ -4,14 +4,18 @@ import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.client.models.item.SaberParts.Emitter;
 import com.lcm.sea.starwars.client.models.item.SaberParts.Handle;
 import com.lcm.sea.starwars.client.models.item.SaberParts.Pommel;
+import com.lcm.sea.starwars.client.render.RenderSaberforge;
+import com.lcm.sea.starwars.common.blocks.BlockSaberforge;
 import com.lcm.sea.starwars.common.items.*;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import com.lcm.sea.starwars.common.mobs.vehicles.EntitySpeeder;
 import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerForceSensitive;
+import com.lcm.sea.starwars.common.tileEntities.TileEntitySaberforge;
 import com.lcm.sea.starwars.common.utils.EnumSaberParts;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -21,6 +25,7 @@ import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
@@ -73,6 +78,8 @@ import java.util.Arrays;
 			ModelLoader.setCustomModelResourceLocation(item, 0, loc);
 		}
 
+		setupRenders();
+
 		for (Field f : Blocks.class.getDeclaredFields()) {
 			Block block = (Block) f.get(null);
 			Item item = Item.getItemFromBlock(block);
@@ -95,14 +102,19 @@ import java.util.Arrays;
 		public static final ItemSaberPart pommel = new ItemSaberPart("pommel", new Pommel(), EnumSaberParts.POMMEL);
 		public static final ItemSaberPart handle = new ItemSaberPart("handle", new Handle(), EnumSaberParts.HANDLE);
 		public static final ItemSaberPart emitter = new ItemSaberPart("emitter", new Emitter(), EnumSaberParts.EMITTER);
-		
+
 		public static final Item testSaber = new ItemLightsaberBase("saber", 1F, pommel, handle, emitter);
 		public static final Item kyber = new ItemKyberCrystal("kyber_crystal", 0x222222);
 		public static final Item kyber1 = new ItemKyberCrystal("kyber_crystal1", 0x003cff);
 	}
 
 	public static class Blocks {
+		public static final Block saberForge = new BlockSaberforge().setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+	}
 
+	@SideOnly(Side.CLIENT)
+	public static void setupRenders() {
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySaberforge.class, new RenderSaberforge());
 	}
 
 	public static class AbilityEntries {
