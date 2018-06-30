@@ -1,6 +1,7 @@
 package com.lcm.sea.starwars.common.container;
 
 import com.lcm.sea.starwars.common.items.ItemKyberCrystal;
+import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
 import com.lcm.sea.starwars.common.items.ItemSaberPart;
 import com.lcm.sea.starwars.common.tileEntities.TileEntitySaberforge;
 import com.lcm.sea.starwars.common.utils.EnumSaberParts;
@@ -19,8 +20,8 @@ public class ContainerSaberforge extends Container {
         this.tileEntitySaberforge = tileEntitySaberforge;
 
 
-        this.addSlotToContainer(new SlotSaberforge(tileEntitySaberforge, 0, 50, 20, EnumSaberParts.EMITTER));
-        this.addSlotToContainer(new Slot(tileEntitySaberforge, 1, 50, 40) {
+        this.addSlotToContainer(new SlotSaberforge(tileEntitySaberforge, 0, 80, 8, EnumSaberParts.EMITTER));
+        this.addSlotToContainer(new Slot(tileEntitySaberforge, 1, 80, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
                 if(stack.getItem() instanceof ItemKyberCrystal) {
@@ -29,8 +30,17 @@ public class ContainerSaberforge extends Container {
                 return false;
             }
         });
-        this.addSlotToContainer(new SlotSaberforge(tileEntitySaberforge, 2, 50, 60, EnumSaberParts.HANDLE));
-        this.addSlotToContainer(new SlotSaberforge(tileEntitySaberforge, 3, 50, 80, EnumSaberParts.POMMEL));
+        this.addSlotToContainer(new SlotSaberforge(tileEntitySaberforge, 2, 80, 44, EnumSaberParts.HANDLE));
+        this.addSlotToContainer(new SlotSaberforge(tileEntitySaberforge, 3, 80, 62, EnumSaberParts.POMMEL));
+        this.addSlotToContainer(new Slot(tileEntitySaberforge, 4, 116, 35) {
+            @Override
+            public boolean isItemValid(ItemStack stack) {
+                if(stack.getItem() instanceof ItemLightsaberBase) {
+                    return true;
+                }
+                return false;
+            }
+        });
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {

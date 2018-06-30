@@ -2,6 +2,7 @@ package com.lcm.sea.starwars.client.gui;
 
 import com.lcm.sea.starwars.StarWars;
 import com.lcm.sea.starwars.common.container.ContainerSaberforge;
+import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
 import com.lcm.sea.starwars.common.tileEntities.TileEntitySaberforge;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
@@ -26,7 +27,6 @@ public class GuiSaberforge extends GuiContainer {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-
 
     }
 

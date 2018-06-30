@@ -3,6 +3,8 @@ package com.lcm.sea.starwars;
 import com.lcm.sea.starwars.client.events.RenderingEvents;
 import com.lcm.sea.starwars.common.commands.CommandDimTravel;
 import com.lcm.sea.starwars.common.dimensions.DimensionSetup;
+import com.lcm.sea.starwars.common.init.SWObjects;
+import com.lcm.sea.starwars.common.tileEntities.TileEntitySaberforge;
 import com.lcm.sea.starwars.common.utils.GuiHandler;
 import com.lcm.sea.starwars.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,6 +16,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = StarWars.MODID, name = StarWars.NAME, version = StarWars.VERSION, dependencies = "required:forge@[14.23.1.2574,); required-after:lucraftcore@[1.12-2.0.4,)", acceptedMinecraftVersions = "1.12, 1.12.1, 1.12.2") public class StarWars {
@@ -38,11 +41,13 @@ import org.apache.logging.log4j.Logger;
 		{
 			MinecraftForge.EVENT_BUS.register(new RenderingEvents());
 		}
+		GameRegistry.registerTileEntity(TileEntitySaberforge.class, SWObjects.Blocks.saberForge.getRegistryName().toString());
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 	}
 
 	@EventHandler public void init(FMLInitializationEvent event) {
 		proxy.init();
 		DimensionSetup.init();
+
 	}
 }

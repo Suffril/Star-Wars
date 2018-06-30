@@ -17,10 +17,6 @@ public class BlockSaberforge extends BlockContainer {
 
     }
 
-
-
-
-
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileEntitySaberforge();
