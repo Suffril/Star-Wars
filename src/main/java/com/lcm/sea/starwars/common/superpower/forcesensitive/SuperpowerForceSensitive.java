@@ -43,6 +43,7 @@ import java.util.UUID;
 		return super.addDefaultAbilities(player, list);
 	}
 
+
 	@Override public boolean canLevelUp() {
 		return true;
 	}

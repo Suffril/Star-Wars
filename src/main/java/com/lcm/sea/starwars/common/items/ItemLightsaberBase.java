@@ -27,15 +27,17 @@ import java.util.List;
 public class ItemLightsaberBase extends Item {
 
 	public static float bladeLength;
+	public static ItemKyberCrystal crystal;
 
-	public ItemLightsaberBase(String name, float bladeLength, ItemSaberPart pommel, ItemSaberPart handle, ItemSaberPart emitter) {
+	public ItemLightsaberBase(String name, float bladeLength, ItemSaberPart pommel, ItemSaberPart handle, ItemSaberPart emitter, ItemKyberCrystal crystal) {
 		setMaxStackSize(1);
 
 		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
 		this.bladeLength = bladeLength;
-		this.setTileEntityItemStackRenderer(new RenderLightsaber(pommel, handle, emitter));
+		this.setTileEntityItemStackRenderer(new RenderLightsaber(pommel, handle, emitter, crystal));
 		this.setFull3D();
+		this.crystal = crystal;
 
 
 		//For model animation
@@ -95,15 +97,16 @@ public class ItemLightsaberBase extends Item {
 	}
 
 	@Override public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+		if (stack.hasTagCompound()) {
+			if (stack.getTagCompound().getFloat(NBTKeys.EXTENSION) < bladeLength && stack.getTagCompound().getBoolean(NBTKeys.IGNITED) == true) {
+				stack.getTagCompound().setFloat(NBTKeys.EXTENSION, stack.getTagCompound().getFloat(NBTKeys.EXTENSION) + 0.1F);
+				//System.out.println(stack.getTagCompound().getFloat(NBTKeys.EXTENSION));
+			}
 
-		if(stack.getTagCompound().getFloat(NBTKeys.EXTENSION) < bladeLength && stack.getTagCompound().getBoolean(NBTKeys.IGNITED) == true) {
-			stack.getTagCompound().setFloat(NBTKeys.EXTENSION, stack.getTagCompound().getFloat(NBTKeys.EXTENSION) + 0.1F);
-			//System.out.println(stack.getTagCompound().getFloat(NBTKeys.EXTENSION));
-		}
-
-		if(stack.getTagCompound().getFloat(NBTKeys.EXTENSION) > 0 && stack.getTagCompound().getBoolean(NBTKeys.IGNITED) == false) {
-			stack.getTagCompound().setFloat(NBTKeys.EXTENSION, stack.getTagCompound().getFloat(NBTKeys.EXTENSION) - 0.1F);
-			//System.out.println(stack.getTagCompound().getFloat(NBTKeys.EXTENSION));
+			if (stack.getTagCompound().getFloat(NBTKeys.EXTENSION) > 0 && stack.getTagCompound().getBoolean(NBTKeys.IGNITED) == false) {
+				stack.getTagCompound().setFloat(NBTKeys.EXTENSION, stack.getTagCompound().getFloat(NBTKeys.EXTENSION) - 0.1F);
+				//System.out.println(stack.getTagCompound().getFloat(NBTKeys.EXTENSION));
+			}
 		}
 	}
 
@@ -112,13 +115,7 @@ public class ItemLightsaberBase extends Item {
 		tooltip.add("An elegant weapon for a more civilized age");
 	}
 
-	public static boolean isIgnited(ItemStack stack) {
-		if(stack.getTagCompound().getBoolean(NBTKeys.IGNITED)) {
-			return true;
-		}
-		else {
-			return false;
-		}
+	public static ItemKyberCrystal getCrystal() {
+		return crystal;
 	}
-
 }

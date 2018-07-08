@@ -30,7 +30,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -104,9 +103,13 @@ import java.util.Arrays;
 		public static final ItemSaberPart handle = new ItemSaberPart("handle", new Handle(), EnumSaberParts.HANDLE);
 		public static final ItemSaberPart emitter = new ItemSaberPart("emitter", new Emitter(), EnumSaberParts.EMITTER);
 
-		public static final Item testSaber = new ItemLightsaberBase("saber", 1F, pommel, handle, emitter);
-		public static final Item kyber = new ItemKyberCrystal("kyber_crystal", 0x222222);
-		public static final Item kyber1 = new ItemKyberCrystal("kyber_crystal1", 0x003cff);
+		public static final Item holocron = new ItemHolocron("holocron");
+
+		public static final ItemKyberCrystal kyber = new ItemKyberCrystal("kyber_crystal", 0x222222);
+		public static final ItemKyberCrystal kyber1 = new ItemKyberCrystal("kyber_crystal1", 0x003cff);
+
+		public static final Item testSaber = new ItemLightsaberBase("saber", 1F, pommel, handle, emitter, kyber1);
+
 	}
 
 	public static class Blocks {

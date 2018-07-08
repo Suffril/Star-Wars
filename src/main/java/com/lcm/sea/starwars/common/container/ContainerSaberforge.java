@@ -104,7 +104,7 @@ public class ContainerSaberforge extends Container {
 
         @Override
         public boolean isItemValid(ItemStack stack) {
-            if(((ItemSaberPart) stack.getItem()).getType() == part) {
+            if(stack.getItem() instanceof ItemSaberPart &&((ItemSaberPart) stack.getItem()).getType() == part) {
                 return true;
             }
             return false;

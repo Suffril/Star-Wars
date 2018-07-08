@@ -28,6 +28,9 @@ import org.apache.logging.log4j.Logger;
 
 	public static Logger logger;
 
+	@Mod.Instance(StarWars.MODID)
+	public static StarWars instance;
+
 	@SidedProxy(clientSide = "com.lcm.sea.starwars.proxy.ClientProxy", serverSide = "com.lcm.starwars.proxy.CommonProxy") public static CommonProxy proxy;
 
 	@EventHandler public static void serverStart(FMLServerStartingEvent e) {
