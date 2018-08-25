@@ -10,8 +10,11 @@ import com.lcm.sea.starwars.common.items.*;
 import com.lcm.sea.starwars.common.mobs.EntityBB8;
 import com.lcm.sea.starwars.common.mobs.vehicles.EntitySpeeder;
 import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerForceSensitive;
+import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerJedi;
+import com.lcm.sea.starwars.common.superpower.forcesensitive.SuperpowerSith;
 import com.lcm.sea.starwars.common.tileEntities.TileEntitySaberforge;
 import com.lcm.sea.starwars.common.utils.EnumSaberParts;
+import lucraft.mods.lucraftcore.superpowers.Superpower;
 import lucraft.mods.lucraftcore.superpowers.abilities.Ability;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -132,6 +135,8 @@ import java.util.Arrays;
 
 	public static class Superpowers {
 		public static final SuperpowerForceSensitive forceSensitive = SuperpowerForceSensitive.INSTANCE;
+		public static final SuperpowerJedi jedi = SuperpowerJedi.INSTANCE;
+		public static final SuperpowerSith sith = SuperpowerSith.INSTANCE;
 	}
 
 	public static class SoundEvents {

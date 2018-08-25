@@ -1,5 +1,6 @@
 package com.lcm.sea.starwars.common.container;
 
+import com.lcm.sea.starwars.common.init.SWObjects;
 import com.lcm.sea.starwars.common.items.ItemKyberCrystal;
 import com.lcm.sea.starwars.common.items.ItemLightsaberBase;
 import com.lcm.sea.starwars.common.items.ItemSaberPart;
@@ -51,6 +52,7 @@ public class ContainerSaberforge extends Container {
         for (int k = 0; k < 9; k++) {
             addSlotToContainer(new Slot(player.inventory, k, 8 + k * 18, 142));
         }
+
     }
 
     @Override

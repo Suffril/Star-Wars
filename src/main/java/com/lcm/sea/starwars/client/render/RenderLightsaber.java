@@ -12,8 +12,10 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
 import org.lwjgl.opengl.GL11;
+import scala.util.Random;
 
 public class RenderLightsaber extends TileEntityItemStackRenderer {
 
@@ -63,6 +65,7 @@ public class RenderLightsaber extends TileEntityItemStackRenderer {
 
     public void renderBlade(float extension) {
         LCRenderHelper.drawGlowingLine(start, start.addVector(0, extension, 0), this.emitter.getWidth() * 4, color, 0.5F);
+
     }
 
 }

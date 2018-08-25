@@ -18,14 +18,14 @@ import java.util.UUID;
 
 @EventBusSubscriber(modid = StarWars.MODID) public class SuperpowerForceSensitive extends Superpower {
 
-	public static final SuperpowerForceSensitive INSTANCE = new SuperpowerForceSensitive();
+	public static final SuperpowerForceSensitive INSTANCE = new SuperpowerForceSensitive("force_sensitive");
 
 	@SideOnly(Side.CLIENT) private ForceSensitiveRenderer renderer = new ForceSensitiveRenderer();
 	private UUID uuid = UUID.fromString("f1a375cb-327d-4103-89ba-479511c4062b");
 
-	public SuperpowerForceSensitive() {
-		super("force_sensitive");
-		this.setRegistryName(StarWars.MODID, "force_sensitive");
+	public SuperpowerForceSensitive(String name) {
+		super(name);
+		this.setRegistryName(StarWars.MODID, name);
 	}
 
 	@Override public SuperpowerPlayerHandler getNewSuperpowerHandler(ISuperpowerCapability cap) {

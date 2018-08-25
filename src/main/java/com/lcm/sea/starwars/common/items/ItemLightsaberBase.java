@@ -118,4 +118,5 @@ public class ItemLightsaberBase extends Item {
 	public static ItemKyberCrystal getCrystal() {
 		return crystal;
 	}
+
 }

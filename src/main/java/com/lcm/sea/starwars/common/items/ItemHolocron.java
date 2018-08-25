@@ -1,5 +1,6 @@
 package com.lcm.sea.starwars.common.items;
 
+import com.lcm.sea.starwars.client.render.RenderHolocron;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -15,6 +16,7 @@ public class ItemHolocron extends Item {
     public ItemHolocron(String name) {
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
+        this.setTileEntityItemStackRenderer(new RenderHolocron());
     }
 
     @Override
