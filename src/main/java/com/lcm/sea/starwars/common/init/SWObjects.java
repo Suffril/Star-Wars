@@ -65,7 +65,7 @@ import java.util.Arrays;
 					if (Arrays.stream(aClass.getDeclaredFields()).anyMatch(field -> Item.class.isAssignableFrom(field.getType()))) {
 						for (Field f : Blocks.class.getDeclaredFields()) {
 							Block block = (Block) f.get(null);
-							entries.add(new ItemBlock(block).setRegistryName(block.getRegistryName()).setUnlocalizedName(block.getUnlocalizedName()));
+							entries.add(new ItemBlock(block).setRegistryName(block.getRegistryName()).setTranslationKey(block.getTranslationKey()));
 						}
 					}
 					entries.forEach(registry::register);

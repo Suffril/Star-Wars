@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class ItemHolocron extends Item {
 
     public ItemHolocron(String name) {
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
         this.setRegistryName(name);
         this.setTileEntityItemStackRenderer(new RenderHolocron());
     }

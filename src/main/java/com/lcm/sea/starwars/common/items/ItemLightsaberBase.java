@@ -32,7 +32,7 @@ public class ItemLightsaberBase extends Item {
 	public ItemLightsaberBase(String name, float bladeLength, ItemSaberPart pommel, ItemSaberPart handle, ItemSaberPart emitter, ItemKyberCrystal crystal) {
 		setMaxStackSize(1);
 
-		this.setUnlocalizedName(name);
+		this.setTranslationKey(name);
 		this.setRegistryName(name);
 		this.bladeLength = bladeLength;
 		this.setTileEntityItemStackRenderer(new RenderLightsaber(pommel, handle, emitter, crystal));

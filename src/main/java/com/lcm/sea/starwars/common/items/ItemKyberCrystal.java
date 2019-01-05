@@ -13,7 +13,7 @@ public class ItemKyberCrystal extends Item {
     private int colour;
 
     public ItemKyberCrystal(String name, int colour) {
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
         this.setRegistryName(name);
         this.setMaxStackSize(1);
         this.colour = colour;

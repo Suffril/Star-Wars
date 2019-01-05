@@ -10,7 +10,7 @@ public class ItemSaberPart extends Item {
     private EnumSaberParts type;
 
     public ItemSaberPart(String name, ModelLightsaberPart model, EnumSaberParts type) {
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
         this.setRegistryName(name);
         this.model = model;
         this.type = type;

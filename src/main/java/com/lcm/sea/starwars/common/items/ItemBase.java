@@ -10,13 +10,13 @@ public class ItemBase extends Item {
 	 */
 
 	public ItemBase(String name, CreativeTabs tab) {
-		setUnlocalizedName(name);
+		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(tab);
 	}
 
 	public ItemBase(String name) {
-		setUnlocalizedName(name);
+		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.COMBAT);
 	}

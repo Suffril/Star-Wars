@@ -23,7 +23,7 @@ public class BlockSaberforge extends BlockContainer {
 
     public BlockSaberforge() {
         super(Material.IRON);
-        this.setUnlocalizedName("saberforge");
+        this.setTranslationKey("saberforge");
         this.setRegistryName("saberforge");
 
     }

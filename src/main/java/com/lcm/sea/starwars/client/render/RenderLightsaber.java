@@ -64,7 +64,7 @@ public class RenderLightsaber extends TileEntityItemStackRenderer {
     }
 
     public void renderBlade(float extension) {
-        LCRenderHelper.drawGlowingLine(start, start.addVector(0, extension, 0), this.emitter.getWidth() * 4, color, 0.5F);
+        LCRenderHelper.drawGlowingLine(start, start.add(0, extension, 0), this.emitter.getWidth() * 4, color, 0.5F);
 
     }
 

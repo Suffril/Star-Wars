@@ -16,7 +16,7 @@ public class ItemEatableBase extends ItemFood {
 
 	public ItemEatableBase(int amount, boolean isWolfFood, String regName, EnumAction action) {
 		super(amount, isWolfFood);
-		setUnlocalizedName(regName);
+		setTranslationKey(regName);
 		setRegistryName(regName);
 		setCreativeTab(CreativeTabs.BREWING);
 		this.action = action;
